@@ -1,0 +1,90 @@
+\documentclass[11pt,one column]{report}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{fullpage}
+\usepackage{verbatim}
+\usepackage{alltt}
+\usepackage{syntonly}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{theorem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{setspace}
+%\setstretch{1.1}
+\usepackage{makeidx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{microtype}
+\usepackage[top=1.5in,bottom=1.5in,left=1in,right=1in]{geometry}
+
+\setlength{\parindent}{0.5in}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{define}{Definition}
+
+\floatstyle{ruled}
+\newfloat{policy}{thp}{lop}
+\floatname{policy}{Example}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+\newcommand{\UP}{{\it UP} }
+\newcommand{\User}{{\it User} }
+\renewcommand{\bibname}{References}
+
+\renewcommand{\topfraction}{0.95}     % max fraction of floats at top
+\renewcommand{\bottomfraction}{0.95}  % max fraction of floats at bottom
+\renewcommand{\textfraction}{0.05}    % min fraction of text
+
+\begin{document}
+\include{00_cover/cover}
+
+\linespread{1.65}%
+\selectfont
+\setlength{\parskip}{1.2ex plus 1.8ex minus 0.2ex}
+%
+\vspace*{\fill}
+\begingroup
+\begin{abstract}
+
+Visual clutter, the perception of an image as being crowded and disordered, affects aspects of our lives ranging from object detection to aesthetics, yet relatively little effort has been made to model this important and ubiquitous percept. Our approach models clutter as the number of proto-objects segmented from an image, with proto-objects defined by superpixel similarity in intensity, color, and texture, features. First we survey recent work on proto-object and visual clutter models, as well as the various image segmentation methods; then we introduce a novel parametric method of merging superpixels using mixtures of Weibull distributions of edge weights, then take the normalized number of proto-objects following partitioning as our estimate of clutter. The model is validated using clutter ratings of 90 images (SUN Dataset) obtained from humans, and showed that our method not only predicted clutter extremely well ($r=0.76$, $p<0.001$), but also outperformed other clutter prediction methods~\cite{grabner2013visual}.
+
+\end{abstract}
+\endgroup
+\vspace*{\fill}
+
+\newpage
+\tableofcontents
+%\listoffigures
+%\listoftables
+\pagebreak
+\setcounter{page}{1}
+
+
+\bibliographystyle{plain}
+\bibliography{rpe}
+
+\end{document}
